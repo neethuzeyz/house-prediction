@@ -1,0 +1,27 @@
+# 🏠 House Price Prediction
+
+This project predicts house prices using the California Housing dataset and Random Forest Regressor.
+
+## Features
+- ML model trained with `scikit-learn`
+- Model saved as `.pkl`
+- Flask backend
+- Frontend with HTML/CSS/JS
+
+## Run the App
+
+1. Install requirements:
+
+2. Run the backend:
+
+3. Open your browser at `http://127.0.0.1:5000`
+
+## Input Fields
+- Median Income
+- House Age
+- Average Rooms
+- Average Bedrooms
+- Population
+- Average Occupancy
+- Latitude
+- Longitude

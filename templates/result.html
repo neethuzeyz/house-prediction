@@ -1,0 +1,31 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://cdn-icons-png.flaticon.com/512/69/69407.png" alt="House Icon" class="icon">
+            <h1>Prediction Result</h1>
+        </header>
+
+        <main>
+            <h2>🏠 Estimated Price</h2>
+            <p class="subtitle">Based on your input, the predicted median house value is:</p>
+            <div class="prediction-box">
+                ₹ <span class="highlight">{{ prediction }}</span> Lakhs
+            </div>
+            <a href="/" class="btn">🔁 Predict Again</a>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 | Powered by Flask + ML</p>
+        </footer>
+    </div>
+</body>
+</html>

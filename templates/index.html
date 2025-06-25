@@ -1,0 +1,56 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🏠 House Price Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://cdn-icons-png.flaticon.com/512/69/69407.png" alt="House Icon" class="icon">
+            <h1>House Price Prediction</h1>
+            <p class="subtitle">Enter the house details to estimate the price (in Lakhs) 🏡</p>
+        </header>
+
+        <form action="/predict" method="post" class="form">
+            <label for="MedInc">💼 Median Income:</label>
+            <input type="number" name="MedInc" id="MedInc" step="0.01" required>
+
+            <label for="HouseAge">🏚️ House Age:</label>
+            <input type="number" name="HouseAge" id="HouseAge" step="1" required>
+
+            <label for="AveRooms">🛏️ Average Rooms:</label>
+            <input type="number" name="AveRooms" id="AveRooms" step="0.01" required>
+
+            <label for="AveBedrms">🛌 Average Bedrooms:</label>
+            <input type="number" name="AveBedrms" id="AveBedrms" step="0.01" required>
+
+            <label for="Population">👨‍👩‍👧‍👦 Population:</label>
+            <input type="number" name="Population" id="Population" step="1" required>
+
+            <label for="AveOccup">🏘️ Average Occupancy:</label>
+            <input type="number" name="AveOccup" id="AveOccup" step="0.01" required>
+
+            <label for="Latitude">🌍 Latitude:</label>
+            <input type="number" name="Latitude" id="Latitude" step="0.01" required>
+
+            <label for="Longitude">🧭 Longitude:</label>
+            <input type="number" name="Longitude" id="Longitude" step="0.01" required>
+
+            <button type="submit" class="btn">📈 Predict Price</button>
+        </form>
+
+        <footer>
+            <p>✨ ML Project | &copy; 2025 NESSA</p>
+        </footer>
+    </div>
+</body>
+</html>
